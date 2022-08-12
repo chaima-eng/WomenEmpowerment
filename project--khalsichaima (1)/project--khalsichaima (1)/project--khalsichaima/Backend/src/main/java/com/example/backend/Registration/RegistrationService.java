@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
@@ -23,8 +24,10 @@ public class RegistrationService {
     private final EmailValidator emailValidator;
     private final JwtService appUserService;
 
-    public String register(RegistrationRequest request)
+    public Optional<ConfirmationToken> register(RegistrationRequest request)
     {
+
+
         boolean isValidEmail = emailValidator.
                 test(request.getEmail());
         if (!isValidEmail) {
@@ -48,7 +51,10 @@ public class RegistrationService {
                 request.getEmail(),
                 buildEmail(request.getFirstName(), link));
 
-        return token;
+
+
+
+        return confirmationTokenService.getToken(token);
 
 
     }
