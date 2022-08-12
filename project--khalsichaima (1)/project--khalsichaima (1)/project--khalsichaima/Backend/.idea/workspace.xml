@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6bde83ef-6cd7-424d-bbc6-5664e4347f92" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2BUHwmVyaqOp3x4gh1aID4Se5VF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Shayma/Downloads/Delisas-project--khalsichaima (1)/Delisas-project--khalsichaima (1)/Delisas-project--khalsichaima/Backend/src/main/java/com/example/backend/Registration",
+    "spring.configuration.checksum": "2e427c268ac1768b9add94b65e2d6c14"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.backend.Entity" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Shayma\Downloads\Delisas-project--khalsichaima (1)\Delisas-project--khalsichaima (1)\Delisas-project--khalsichaima\Backend\src\main\java\com\example\backend\Registration" />
+      <recent name="C:\Users\Shayma\Downloads\Delisas-project--khalsichaima (1)\Delisas-project--khalsichaima (1)\Delisas-project--khalsichaima\Backend\src\main\java\com\example\backend" />
+      <recent name="C:\Users\Shayma\Documents\GitHub\Delisas-project-\Backend\src\main\java\com\example\backend\Service" />
+      <recent name="C:\Users\Shayma\Documents\GitHub\Delisas-project-\Backend\src\main\java\com\example\backend\Entity" />
+      <recent name="C:\Users\Shayma\Documents\GitHub\Delisas-project-\Backend\src\main\java\com\example\backend" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Shayma\Documents\GitHub\Delisas-project-\Backend\src\main\resources" />
+      <recent name="C:\Users\Shayma\Documents\GitHub\Delisas-project-\Backend\src\main\Webapp\Images" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.backend.Registration" />
+      <recent name="com.example.backend.Controller" />
+      <recent name="com.example.backend.Entity" />
+      <recent name="com.example.backend.Service" />
+      <recent name="com.example.backend.Repository" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.backend.BackendApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6bde83ef-6cd7-424d-bbc6-5664e4347f92" name="Changes" comment="" />
+      <created>1656953988118</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1656953988118</updated>
+      <workItem from="1656953989886" duration="2184000" />
+      <workItem from="1656957090095" duration="2795000" />
+      <workItem from="1657013733427" duration="39873000" />
+      <workItem from="1657149229826" duration="342000" />
+      <workItem from="1657199139830" duration="1361000" />
+      <workItem from="1657272694339" duration="1598000" />
+      <workItem from="1657531725715" duration="11435000" />
+      <workItem from="1657553747568" duration="5723000" />
+      <workItem from="1657566059253" duration="2279000" />
+      <workItem from="1657614856226" duration="40379000" />
+      <workItem from="1657736780508" duration="11317000" />
+      <workItem from="1657786182645" duration="21429000" />
+      <workItem from="1657879011908" duration="52128000" />
+      <workItem from="1658324512953" duration="6475000" />
+      <workItem from="1658408402942" duration="79000" />
+      <workItem from="1658420787817" duration="907000" />
+      <workItem from="1658424360913" duration="56754000" />
+      <workItem from="1658757008522" duration="29870000" />
+      <workItem from="1659013202083" duration="11623000" />
+      <workItem from="1659113602295" duration="13856000" />
+      <workItem from="1659201674758" duration="4413000" />
+      <workItem from="1659290295841" duration="1956000" />
+      <workItem from="1659459828071" duration="10726000" />
+      <workItem from="1659551658541" duration="9936000" />
+      <workItem from="1659607557145" duration="2807000" />
+      <workItem from="1659635040103" duration="9173000" />
+      <workItem from="1659691429623" duration="3930000" />
+      <workItem from="1659710395805" duration="4794000" />
+      <workItem from="1660312318201" duration="13375000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
