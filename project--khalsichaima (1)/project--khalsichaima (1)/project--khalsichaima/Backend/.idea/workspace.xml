@@ -21,7 +21,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -54,7 +54,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Shayma/Downloads/Delisas-project--khalsichaima (1)/Delisas-project--khalsichaima (1)/Delisas-project--khalsichaima/Backend/src/main/java/com/example/backend/Registration",
+    "last_opened_file_path": "C:/Users/Shayma/Documents/GitHub/WomenEmpowerment/project--khalsichaima (1)/project--khalsichaima (1)/project--khalsichaima/Backend/src/main/java/com/example/backend/Entity",
     "spring.configuration.checksum": "2e427c268ac1768b9add94b65e2d6c14"
   }
 }]]></component>
@@ -63,22 +63,22 @@
       <recent name="com.example.backend.Entity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Shayma\Documents\GitHub\WomenEmpowerment\project--khalsichaima (1)\project--khalsichaima (1)\project--khalsichaima\Backend\src\main\java\com\example\backend\Entity" />
       <recent name="C:\Users\Shayma\Downloads\Delisas-project--khalsichaima (1)\Delisas-project--khalsichaima (1)\Delisas-project--khalsichaima\Backend\src\main\java\com\example\backend\Registration" />
       <recent name="C:\Users\Shayma\Downloads\Delisas-project--khalsichaima (1)\Delisas-project--khalsichaima (1)\Delisas-project--khalsichaima\Backend\src\main\java\com\example\backend" />
       <recent name="C:\Users\Shayma\Documents\GitHub\Delisas-project-\Backend\src\main\java\com\example\backend\Service" />
       <recent name="C:\Users\Shayma\Documents\GitHub\Delisas-project-\Backend\src\main\java\com\example\backend\Entity" />
-      <recent name="C:\Users\Shayma\Documents\GitHub\Delisas-project-\Backend\src\main\java\com\example\backend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Shayma\Documents\GitHub\Delisas-project-\Backend\src\main\resources" />
       <recent name="C:\Users\Shayma\Documents\GitHub\Delisas-project-\Backend\src\main\Webapp\Images" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.backend.Service" />
+      <recent name="com.example.backend.Repository" />
       <recent name="com.example.backend.Registration" />
       <recent name="com.example.backend.Controller" />
       <recent name="com.example.backend.Entity" />
-      <recent name="com.example.backend.Service" />
-      <recent name="com.example.backend.Repository" />
     </key>
   </component>
   <component name="RunManager">
@@ -127,6 +127,7 @@
       <workItem from="1659691429623" duration="3930000" />
       <workItem from="1659710395805" duration="4794000" />
       <workItem from="1660312318201" duration="13375000" />
+      <workItem from="1660330994819" duration="6731000" />
     </task>
     <servers />
   </component>

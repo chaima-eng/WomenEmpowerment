@@ -3,7 +3,9 @@ package com.example.backend.Controller;
 
 import com.example.backend.Entity.*;
 import com.example.backend.Repository.IntUserRepo;
+import com.example.backend.Repository.PasswordTokenRepository;
 import com.example.backend.Service.JwtService;
+import com.example.backend.Service.PasswordResetService;
 import com.example.backend.config.JwtUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +36,11 @@ public class JwtController {
 
 	@Autowired
 	PasswordEncoder passwordEncoder;
+	@Autowired
+	PasswordResetService passwordResetService;
+
+	@Autowired
+	PasswordTokenRepository passwordTokenRepository;
 
 
 	@Autowired
@@ -54,23 +61,38 @@ public class JwtController {
 		return jwts.createJwtToken(jwtRequest);
 	}
 
-	/*
-	@PostMapping("/add")
-	public void save(@RequestBody User user) throws Exception{
-
-		user.setPassword(pc.encode(user.getPassword()));
-		userRepo.save(user);
-	}
-
-	 */
-
-
-
-
 	@PostConstruct
 	public void initRoleAndUser() {
 		jwts.initRoleAndUser();
 	}
+
+	@PostMapping("/forget-password")
+	public JwtResponse ForgetPass(@RequestBody String email) {
+		return passwordResetService.forgetPassword(email);
+
+	}
+
+	@PostMapping("/reset-password")
+	public JwtResponse changePassword(@RequestBody PasswordReset passwordDto, @RequestParam String token)
+	{
+		System.out.print(passwordDto );
+		String result = passwordResetService.validatePasswordResetToken(token);
+		if (result != null) {
+			return new JwtResponse("Error Token is : " + result);
+
+		}
+
+		User user =  passwordTokenRepository.findByToken(token).getUser();
+		if (user.getEmail() != null) {
+			passwordResetService.changeUserPassword(user, passwordDto.getNewPassword());
+			passwordTokenRepository.delete(passwordTokenRepository.findByToken(token));
+			return new JwtResponse("Password changed successfully!");
+		} else {
+			return new JwtResponse("Error Token is : " + result);
+
+		}
+	}
+
 
 
 
