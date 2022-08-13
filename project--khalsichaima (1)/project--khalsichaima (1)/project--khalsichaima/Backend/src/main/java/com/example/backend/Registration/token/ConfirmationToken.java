@@ -6,9 +6,15 @@ import com.example.backend.Entity.User;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
+import static javax.persistence.CascadeType.REMOVE;
 
 @Getter
 @Setter
@@ -39,12 +45,13 @@ public class ConfirmationToken {
 
     private LocalDateTime confirmedAt;
 
+
     @ManyToOne
-    @JoinColumn(
-            nullable = false,
-            name = "app_user_id"
-    )
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private User appUser;
+
+
+
 
     public ConfirmationToken(String token,
                              LocalDateTime createdAt,
@@ -53,6 +60,6 @@ public class ConfirmationToken {
         this.token = token;
         this.createdAt = createdAt;
         this.expiresAt = expiresAt;
-        this.appUser = appUser;
+        this.appUser =  appUser;
     }
 }

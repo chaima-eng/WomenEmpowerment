@@ -22,4 +22,13 @@ public interface IntUserRepo extends JpaRepository<User,Integer> {
             "SET a.enabled = TRUE WHERE a.email = ?1")
     int enableAppUser(String email);
 
+
+
+    
+
+
+
+
+
+
 }

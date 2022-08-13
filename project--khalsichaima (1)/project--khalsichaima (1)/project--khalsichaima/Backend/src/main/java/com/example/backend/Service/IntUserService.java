@@ -17,6 +17,8 @@ public interface IntUserService {
     Map<String, Boolean> Delete(int Id)
             throws ResourceNotFoundException;
 
+
+
     ResponseEntity<User> getById(int Id)  throws ResourceNotFoundException;
 
 

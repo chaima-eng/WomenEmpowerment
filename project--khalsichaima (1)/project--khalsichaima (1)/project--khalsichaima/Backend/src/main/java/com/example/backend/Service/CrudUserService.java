@@ -1,5 +1,6 @@
 package com.example.backend.Service;
 
+import com.example.backend.Entity.Role;
 import com.example.backend.Entity.User;
 import com.example.backend.Exception.ResourceNotFoundException;
 import com.example.backend.Repository.IntUserRepo;
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,8 +24,17 @@ public class CrudUserService implements IntUserService {
 
     @Override
     public List<User> getAll() {
-        return ur
-                .findAll();
+        List p =new ArrayList();
+
+        for (User u:ur.findAll())
+        {
+
+            if(u.getRole().equals(Role.USER))
+            {
+                p.add(u);
+            }
+        }
+        return p;
     }
 
     @Override
@@ -52,18 +63,9 @@ public class CrudUserService implements IntUserService {
 
 
 
-
-
-
-
-
-
-
-
-
-
     @Override
     public Map<String, Boolean> Delete(int userId) throws ResourceNotFoundException {
+
         User user = ur.findById(userId)
                 .orElseThrow(() -> new ResourceNotFoundException(" not found   :: " + userId));
         ur.delete(user);
@@ -77,6 +79,8 @@ public class CrudUserService implements IntUserService {
           throws ResourceNotFoundException {
             User user = ur.findById(Id)
                     .orElseThrow(() -> new ResourceNotFoundException("user not found for this id :: " + Id));
+
+
             return ResponseEntity.ok().body(user);
     }
 
