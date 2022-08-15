@@ -12,6 +12,8 @@ import java.util.Optional;
 @RestController
 @RequestMapping(path = "api/v1/registration")
 @AllArgsConstructor
+@CrossOrigin("*")
+
 public class RegistrationController {
 
     private final RegistrationService registrationService;

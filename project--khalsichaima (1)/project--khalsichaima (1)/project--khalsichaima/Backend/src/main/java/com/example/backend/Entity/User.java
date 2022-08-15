@@ -1,9 +1,11 @@
 package com.example.backend.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Getter
@@ -41,6 +43,9 @@ public  class User  {
     private Boolean locked = false;
     private Boolean enabled = false;
 
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    private List<Post> posts;
 
     public User(String userName,String firstName, String lastName, String email, String password,Role role) {
         this.userName = userName;

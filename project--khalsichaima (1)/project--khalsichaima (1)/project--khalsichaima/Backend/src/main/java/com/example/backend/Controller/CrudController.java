@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.Map;
 
 @RestController("/crud")
+@CrossOrigin("*")
+
 public class CrudController {
 
     @Autowired
