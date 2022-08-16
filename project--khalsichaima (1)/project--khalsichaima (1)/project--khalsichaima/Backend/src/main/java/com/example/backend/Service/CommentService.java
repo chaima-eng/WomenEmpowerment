@@ -13,5 +13,9 @@ public interface CommentService {
      void deletecomment(int id);
 
 
+     int getNbrCommentByPost(int idPost);
+
+
+
 
 }

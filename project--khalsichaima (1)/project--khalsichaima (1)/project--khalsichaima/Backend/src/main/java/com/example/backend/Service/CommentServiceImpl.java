@@ -70,5 +70,13 @@ public class CommentServiceImpl implements CommentService{
 
     }
 
+    @Override
+    public int getNbrCommentByPost(int idPost) {
+
+        Post p=postRepository.findById(idPost).orElse(null);
+        return commentRepository
+                .NbrCommentByPost(p);
+    }
+
 
 }

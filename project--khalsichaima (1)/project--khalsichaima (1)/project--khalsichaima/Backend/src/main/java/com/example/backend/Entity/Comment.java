@@ -27,4 +27,5 @@ public class Comment {
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
     private Post post_comment;
+
 }

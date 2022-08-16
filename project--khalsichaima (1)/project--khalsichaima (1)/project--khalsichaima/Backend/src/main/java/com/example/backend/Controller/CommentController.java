@@ -46,5 +46,18 @@ public class CommentController {
 
 
 
+    @GetMapping("getNbComment/{idPost}")
+    public int getNbComment(@PathVariable("idPost") int idPost){
+        return commentService.getNbrCommentByPost(idPost);
+    }
+
+
+
+
+
+
+
+
+
 
 }

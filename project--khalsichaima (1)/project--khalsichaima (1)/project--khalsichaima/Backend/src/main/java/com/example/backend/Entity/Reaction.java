@@ -20,6 +20,12 @@ public class Reaction implements Serializable {
     private int idReaction;
     @Enumerated(EnumType.STRING)
     private ReactionType reactionType;
+
+    @JsonIgnore
+    private int nbLike;
+    @JsonIgnore
+    private int nbDislike;
+
     private Long idUser;
     @ManyToOne
     @OnDelete(action = OnDeleteAction.CASCADE)

@@ -30,7 +30,27 @@ public class ReactionController {
 
 
 
+    @GetMapping("getNbrReactionByPost/{idPost}")
+    public int getNbrReactionByPost(@PathVariable("idPost") int idPost){
 
+        return reactionService.getNbrReactionByPost(idPost);
+    }
+
+
+
+
+    @GetMapping("getNbrLike/{idPost}")
+    public int getNbrLike(@PathVariable("idPost") int idPost){
+        return reactionService.getNbrLike(idPost);
+    }
+
+
+
+
+    @GetMapping("getNbrDisLike/{idPost}")
+    public int getNbrDislike(@PathVariable("idPost") int idPost){
+        return reactionService.getnbrDislike(idPost);
+    }
 
 
 
