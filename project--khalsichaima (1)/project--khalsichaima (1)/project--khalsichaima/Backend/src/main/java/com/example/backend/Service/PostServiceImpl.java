@@ -3,12 +3,17 @@ package com.example.backend.Service;
 
 import com.example.backend.Entity.Post;
 import com.example.backend.Entity.User;
+import com.example.backend.Repository.CommentRepository;
 import com.example.backend.Repository.IntUserRepo;
 import com.example.backend.Repository.PostRepository;
+import com.example.backend.Repository.ReactionRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+
 import javafx.geometry.Pos;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -18,7 +23,10 @@ import javax.servlet.ServletContext;
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
+
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 
 @Service
@@ -93,9 +101,23 @@ public class PostServiceImpl implements PostService {
         return p;
     }
 
+    @Autowired
+    CommentRepository ComR;
+
+
+
+
+
+
+
+
+@Autowired
+    ReactionRepository reactionRepository;
+
     @Override
     public Collection<Post> getAll() {
-        return (Collection<Post>) postRepository.findAll();
+
+        return postRepository.findAll();
     }
 
     @Override
@@ -122,9 +144,30 @@ public class PostServiceImpl implements PostService {
     @Override
     public void deletepost(int id) {
         postRepository.delete(postRepository.findById(id).orElse(null));
-
-
     }
+
+    @Override
+    public List<Post> getPostByUser(int idUser) {
+        List p =new ArrayList();
+
+        for (Post ps:postRepository.findAll())
+        {
+
+            if(ps.getUser().getIdUser()==idUser)
+            {
+                p.add(ps);
+            }
+        }
+        return p;
+    }
+
+
+
+
+
+
+
+
 
 
 }

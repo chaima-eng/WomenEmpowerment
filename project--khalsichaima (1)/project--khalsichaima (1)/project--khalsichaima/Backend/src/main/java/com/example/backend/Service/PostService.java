@@ -8,6 +8,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.Collection;
+import java.util.List;
 
 public interface PostService {
      Post createpost( MultipartFile file,String post,int idUser) throws IOException;
@@ -20,6 +21,7 @@ public interface PostService {
     void deletepost(int id);
 
 
+    List<Post> getPostByUser(int idUser);
 
 
 

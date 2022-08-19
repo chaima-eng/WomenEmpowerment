@@ -32,14 +32,6 @@ public class Post implements Serializable {
     @JsonIgnore
     private User user;
 
-
-
-
-
-
-
-
-
     @OneToMany(mappedBy = "post_comment",cascade ={CascadeType.PERSIST,CascadeType.REMOVE})
     @JsonIgnore
     private List<Comment> comments;

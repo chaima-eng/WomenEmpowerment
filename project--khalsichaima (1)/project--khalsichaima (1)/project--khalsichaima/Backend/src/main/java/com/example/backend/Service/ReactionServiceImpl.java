@@ -10,6 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 @Slf4j
 @CrossOrigin("*")
@@ -80,11 +83,14 @@ public class ReactionServiceImpl  implements ReactionService{
 
     }
 
+
     @Override
     public int getNbrReactionByPost(int idPost) {
         Post p=postRepository.findById(idPost).orElse(null);
         return reactionRepository.NbrReactionByPost(p);
     }
+
+
 
     @Override
     public int getNbrLike(int idPost) {

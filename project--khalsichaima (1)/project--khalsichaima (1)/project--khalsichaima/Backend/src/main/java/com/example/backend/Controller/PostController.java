@@ -1,14 +1,15 @@
 package com.example.backend.Controller;
 
 import com.example.backend.Entity.Post;
+import com.example.backend.Entity.Reaction;
 import com.example.backend.Repository.PostRepository;
+import com.example.backend.Repository.ReactionRepository;
 import com.example.backend.Service.PostService;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
-import javafx.geometry.Pos;
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -16,7 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.ServletContext;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Collection;
+import java.util.*;
 
 @Slf4j
 @RestController
@@ -26,9 +27,29 @@ import java.util.Collection;
 public class PostController {
 
     @Autowired
+    PostRepository postRepository;
+
+    @Autowired
     PostService PS;
     @Autowired
     PostRepository RP;
+    @Autowired
+    ReactionRepository reactionRepository;
+
+
+
+
+    @GetMapping("/getPostByUser/{idUser}")
+    public List<Post> getPostByUser(@PathVariable("idUser")int idUser)
+    {
+        return PS.getPostByUser(idUser);
+    }
+
+
+
+
+
+
 
 
 
@@ -42,8 +63,8 @@ public class PostController {
 
 
     @GetMapping("/all-post")
-    public ResponseEntity<Collection<Post>> getAllPosts() {
-        return new ResponseEntity<>(PS.getAll(), HttpStatus.OK);
+    public Collection<Post> getAllPosts() {
+        return PS.getAll();
     }
 
 
@@ -75,6 +96,79 @@ public class PostController {
         Post p   = RP.findById(id).get();
         return Files.readAllBytes(Paths.get(context.getRealPath("/Images/")+p.getFile()));
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    @GetMapping ("/getAll")
+    public ResponseEntity<List<String>> getAll()
+    {
+        List<String> listArt = new ArrayList<String>();
+        String filesPath = context.getRealPath("/Images");
+        File filefolder = new File(filesPath);
+        if (filefolder != null)
+        {
+            for (File file :filefolder.listFiles())
+            {
+                if(!file.isDirectory())
+                {
+                    String encodeBase64 = null;
+                    try {
+                        String extension = FilenameUtils.getExtension(file.getName());
+                        FileInputStream fileInputStream = new FileInputStream(file);
+                        byte[] bytes = new byte[(int)file.length()];
+                        fileInputStream.read(bytes);
+                        encodeBase64 = Base64.getEncoder().encodeToString(bytes);
+                        listArt.add("data:image/"+extension+";base64,"+encodeBase64);
+                        fileInputStream.close();
+
+
+                    }catch (Exception e){
+
+                    }
+                }
+            }
+        }
+        return new ResponseEntity<List<String>>(listArt,HttpStatus.OK);
+
+
+
+    }
+
+
+
+ */
+
+
+
+
+
 
 
 

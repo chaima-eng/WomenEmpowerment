@@ -13,4 +13,10 @@ public interface ReactionService {
     int getNbrLike(int idPost);
 
     int getnbrDislike(int idPost);
+
+
+
+
+
+
 }
