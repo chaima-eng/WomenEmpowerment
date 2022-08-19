@@ -43,21 +43,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Shayma/Documents/GitHub/WomenEmpowerment/project--khalsichaima (1)/project--khalsichaima (1)/project--khalsichaima/Backend/src/main/java/com/example/backend/Service",
-    "spring.configuration.checksum": "2e427c268ac1768b9add94b65e2d6c14"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Shayma/Documents/GitHub/WomenEmpowerment/project--khalsichaima (1)/project--khalsichaima (1)/project--khalsichaima/Backend/src/main/java/com/example/backend/Service&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;2e427c268ac1768b9add94b65e2d6c14&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.backend.Entity" />
@@ -131,7 +131,8 @@
       <workItem from="1660387103901" duration="4931000" />
       <workItem from="1660392415668" duration="1314000" />
       <workItem from="1660399180158" duration="1344000" />
-      <workItem from="1660561702885" duration="14627000" />
+      <workItem from="1660561702885" duration="15259000" />
+      <workItem from="1660900849406" duration="712000" />
     </task>
     <servers />
   </component>

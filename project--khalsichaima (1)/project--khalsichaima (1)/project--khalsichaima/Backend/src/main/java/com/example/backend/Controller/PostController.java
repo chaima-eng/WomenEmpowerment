@@ -1,6 +1,7 @@
 package com.example.backend.Controller;
 
 import com.example.backend.Entity.Post;
+import com.example.backend.Repository.PostRepository;
 import com.example.backend.Service.PostService;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -12,6 +13,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.ServletContext;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Collection;
 
 @Slf4j
@@ -23,6 +27,8 @@ public class PostController {
 
     @Autowired
     PostService PS;
+    @Autowired
+    PostRepository RP;
 
 
 
@@ -61,8 +67,14 @@ public class PostController {
         PS.deletepost(id);
     }
 
+    @Autowired
+    ServletContext context;
 
-
+    @GetMapping(path="/Imgarticles/{id}")
+    public byte[] getPhoto(@PathVariable("id") int id) throws Exception{
+        Post p   = RP.findById(id).get();
+        return Files.readAllBytes(Paths.get(context.getRealPath("/Images/")+p.getFile()));
+    }
 
 
 
