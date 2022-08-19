@@ -17,7 +17,7 @@ public class ReactionController {
 
 
     @PostMapping("/addReaction/{idPost}/{idUser}")
-    public void addReactToPost(@RequestBody Reaction reaction, @PathVariable int idPost, @PathVariable Long idUser){
+    public void addReactToPost(@RequestBody Reaction reaction, @PathVariable int idPost, @PathVariable int idUser){
         reactionService.addReactToPost(reaction,idPost,idUser);
     }
 
