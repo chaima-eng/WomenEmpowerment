@@ -5,6 +5,7 @@ import com.example.backend.Entity.Post;
 import org.springframework.http.ResponseEntity;
 
 import java.util.Collection;
+import java.util.List;
 
 public interface CommentService {
      Comment createcomment(Comment comment, int idPost, Long idUser);
@@ -15,7 +16,7 @@ public interface CommentService {
 
      int getNbrCommentByPost(int idPost);
 
-
+     List<Comment> getCommentByPost(int idPOst);
 
 
 }

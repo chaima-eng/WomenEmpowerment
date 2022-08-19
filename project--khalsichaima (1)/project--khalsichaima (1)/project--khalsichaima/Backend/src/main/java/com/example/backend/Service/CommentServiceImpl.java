@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 
 @Service
 public class CommentServiceImpl implements CommentService{
@@ -77,6 +78,14 @@ public class CommentServiceImpl implements CommentService{
         return commentRepository
                 .NbrCommentByPost(p);
     }
+
+    @Override
+    public List<Comment> getCommentByPost(int idPOst) {
+        Post p=postRepository.findById(idPOst).orElse(null);
+        return p.getComments();
+    }
+
+
 
 
 }

@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
+import java.util.List;
 
 @CrossOrigin("*")
 @RestController("/commentController")
@@ -53,7 +54,11 @@ public class CommentController {
 
 
 
-
+    @GetMapping("getcommentByPostID/{idPOst}")
+    public List<Comment> getCommentByPost(@PathVariable("idPOst") int idPOst)
+    {
+        return commentService.getCommentByPost(idPOst);
+    }
 
 
 
