@@ -34,6 +34,8 @@ public class ReactionServiceImpl  implements ReactionService{
 
         boolean userExists = userRepo
                 .findById(idUser).isPresent();
+
+
         int nb=0;
         Reaction isReacted=null;
         Reaction isReactedSame=null;
@@ -43,11 +45,9 @@ public class ReactionServiceImpl  implements ReactionService{
             if(r.getIdUser()==idUser && r.getPost().getId()==idPost ){
                 if( r.getReactionType().equals(reaction.getReactionType())){
                     isReactedSame=r;
-
-                    r.setNbLike(0);
-                    r.setNbDislike(0);
-                    reactionRepository.save(r);
+                    reactionRepository.delete(r);
                 }
+
                 isReacted=r;
 
             }
@@ -70,61 +70,7 @@ public class ReactionServiceImpl  implements ReactionService{
                 reactionRepository.save(reaction);
             }
 
-
-
         }
-
-        /*
-
-        if(isReactedSame!=null)
-        {
-           // reactionRepository.findById(reaction.getIdReaction());
-
-
-            reaction.setNbLike(0);
-            reaction.setNbDislike(0);
-            reactionRepository.save(reaction);
-
-        }
-       else
-        {
-            reaction.setIdUser((long) idUser);
-            reaction.setPost(p);
-            reaction.setNbLike(nb+1);
-            reactionRepository.save(reaction);
-
-        }
-
-
-         */
-
-
-
-/*
-         if (reaction.getReactionType().equals(ReactionType.LIKE)&&(isReacted!=null))
-        {
-
-
-            if(reaction.setIdReaction().)
-            {
-                //System.out.println(idUser);
-                reaction.setNbLike(0);
-                reactionRepository.save(reaction);
-            }
-
-
-                reaction.setNbLike(nb+1);
-                reactionRepository.save(reaction);
-
-        }
-        else if (reaction.getReactionType().equals(ReactionType.DISLIKE))
-        {
-
-        }
-
-
- */
-
 
     }
 
