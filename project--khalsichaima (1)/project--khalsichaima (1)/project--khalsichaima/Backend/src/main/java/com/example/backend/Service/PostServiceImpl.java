@@ -2,6 +2,7 @@ package com.example.backend.Service;
 
 
 import com.example.backend.Entity.Post;
+import com.example.backend.Entity.Reaction;
 import com.example.backend.Entity.User;
 import com.example.backend.Repository.CommentRepository;
 import com.example.backend.Repository.IntUserRepo;
@@ -160,6 +161,55 @@ public class PostServiceImpl implements PostService {
         }
         return p;
     }
+
+    @Override
+    public double Rating(int idPost) {
+        double rating = 0.0;
+        Post post
+                = postRepository.findById(idPost).orElse(null);
+
+        for(Reaction reaction : reactionRepository.findAll())
+        {
+            if(reaction.getPost().getId()==idPost)
+            {
+                if (reactionRepository.countYes(idPost)-reactionRepository.countNo(idPost) == 0)
+                {
+                    rating= 0.0; // 0 stars
+
+                }
+                else if (reactionRepository.countYes(idPost)-reactionRepository.countNo(idPost)==1)
+                {
+                    rating= 10.0; //1 Stars
+
+                }
+
+                else if (reactionRepository.countYes(idPost)-reactionRepository.countNo(idPost)==2)
+                {
+                    rating= 20.0; //2 Stars
+
+                }
+                else if (reactionRepository.countYes(idPost)-reactionRepository.countNo(idPost)==3)
+                {
+                    rating= 30.0; //3 Stars
+
+                }
+                else if (reactionRepository.countYes(idPost)-reactionRepository.countNo(idPost)==4)
+                {
+                    rating= 40.0; //4 Stars
+
+                }
+                else if (reactionRepository.countYes(idPost)-reactionRepository.countNo(idPost)>=5)
+                {
+                    rating=100.0; // 5 Stars
+
+                }
+            }
+        }
+        post.setPourcentage(rating);
+        postRepository.save(post);
+        return rating;
+    }
+
 
 
 

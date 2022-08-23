@@ -26,6 +26,7 @@ public class Post implements Serializable {
     private LocalDateTime modifiedAt;
     String file;
 
+    private double pourcentage;
 
     @ManyToOne
     @OnDelete(action = OnDeleteAction.CASCADE)

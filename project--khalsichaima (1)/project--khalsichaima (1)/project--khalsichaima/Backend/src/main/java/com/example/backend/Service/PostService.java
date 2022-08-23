@@ -23,6 +23,8 @@ public interface PostService {
 
     List<Post> getPostByUser(int idUser);
 
+    double Rating(int idPost);
+
 
 
 

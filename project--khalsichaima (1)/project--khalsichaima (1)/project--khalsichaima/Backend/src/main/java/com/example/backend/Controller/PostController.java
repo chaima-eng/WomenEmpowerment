@@ -99,6 +99,11 @@ public class PostController {
 
 
 
+    @GetMapping(path="/Rating/{id}")
+    public double Rating( @PathVariable("id") int idPost)
+    {
+        return PS.Rating(idPost);
+    }
 
 
 
