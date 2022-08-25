@@ -19,7 +19,10 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.time.Instant;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
@@ -28,6 +31,7 @@ import java.util.UUID;
 @Primary
 @Service
 public class JwtService implements UserDetailsService {
+
 
 
 
@@ -44,6 +48,9 @@ public class JwtService implements UserDetailsService {
 	private PasswordEncoder pc;
 
 
+	private Date localDate = Date.from(Instant.ofEpochSecond(00));
+
+
 	private final ConfirmationTokenService confirmationTokenService;
 
 	public JwtService(ConfirmationTokenService confirmationTokenService) {
@@ -56,6 +63,17 @@ public class JwtService implements UserDetailsService {
 			adminUser.setPassword(pc.encode("admin"));
 			adminUser.setLastName("admin");
 			adminUser.setEmail("admin@gmail.com");
+			adminUser.setTel("admin");
+			adminUser.setJob("admin");
+			adminUser.setStudyLevel("admin");
+			adminUser.setAdresse("admin");
+			adminUser.setCin("admin");
+			adminUser
+					.setCivilState("admin");
+			adminUser.setDateOfBirth(localDate);
+			adminUser.setMonthlyUncome(200);
+			adminUser
+					.setNbrOffamilly(0);
 			adminUser.setEnabled(true);
 			adminUser.setRole(Role.Admin);
 			ur.save(adminUser);
