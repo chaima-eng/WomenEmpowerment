@@ -40,6 +40,16 @@ public class RegistrationService {
                         request.getFirstName(),
                         request.getLastName(),
                         request.getEmail(),
+                        request.getCin(),
+                        request.getAdresse(),
+                        request.getDateOfBirth(),
+                        request.getCivilState(),
+                        request.getPostalcode(),
+                        request.getStudyLevel(),
+                        request.getJob(),
+                        request.getMonthlyUncome(),
+                        request.getNbrOffamilly(),
+                        request.getTel(),
                         request.getPassword(),
                         Role.USER
 

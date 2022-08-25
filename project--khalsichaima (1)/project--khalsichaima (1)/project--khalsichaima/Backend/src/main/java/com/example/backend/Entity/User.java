@@ -47,11 +47,30 @@ public  class User  {
     @JsonIgnore
     private List<Post> posts;
 
-    public User(String userName,String firstName, String lastName, String email, String password,Role role) {
+    public User(String userName,String firstName, String lastName, String email,String cin,String adresse,Date dateOfBirth,
+                String civilState ,
+                int postalcode,
+                String studyLevel,
+                String job,
+                int monthlyUncome,
+
+               int nbrOffamilly,
+                String tel
+            ,String password,Role role) {
         this.userName = userName;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.cin= cin;
+        this.adresse=adresse;
+        this.dateOfBirth=dateOfBirth;
+        this.civilState=civilState;
+        this.postalcode=postalcode;
+        this.studyLevel=studyLevel;
+        this.job=job;
+        this.monthlyUncome=monthlyUncome;
+        this.nbrOffamilly=nbrOffamilly;
+        this.tel=tel;
         this.password = password;
         this.role = role;
 
