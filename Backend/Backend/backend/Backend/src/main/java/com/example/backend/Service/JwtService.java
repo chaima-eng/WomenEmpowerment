@@ -22,10 +22,7 @@ import org.springframework.stereotype.Service;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
 
 
 @Primary
@@ -56,27 +53,46 @@ public class JwtService implements UserDetailsService {
 	public JwtService(ConfirmationTokenService confirmationTokenService) {
 		this.confirmationTokenService = confirmationTokenService;
 	}
-	public void initRoleAndUser() {
+	public void initRoleAndUser( ) {
 		User adminUser = new User();
-			adminUser.setUserName("admin");
-			adminUser.setFirstName("admin");
-			adminUser.setPassword(pc.encode("admin"));
-			adminUser.setLastName("admin");
-			adminUser.setEmail("admin@gmail.com");
-			adminUser.setTel("admin");
-			adminUser.setJob("admin");
-			adminUser.setStudyLevel("admin");
-			adminUser.setAdresse("admin");
-			adminUser.setCin("admin");
-			adminUser
-					.setCivilState("admin");
-			adminUser.setDateOfBirth(localDate);
-			adminUser.setMonthlyUncome(200);
-			adminUser
-					.setNbrOffamilly(0);
-			adminUser.setEnabled(true);
-			adminUser.setRole(Role.Admin);
-			ur.save(adminUser);
+
+
+
+		for (User appUser:ur.findAll())
+		{
+			if(!ur
+					.findByEmail(appUser.getEmail()).isPresent())
+			{
+				adminUser.setUserName("admin");
+				adminUser.setFirstName("admin");
+				adminUser.setPassword(pc.encode("admin"));
+				adminUser.setLastName("admin");
+				adminUser.setEmail("admin@gmail.com");
+				adminUser.setTel("admin");
+				adminUser.setJob("admin");
+				adminUser.setStudyLevel("admin");
+				adminUser.setAdresse("admin");
+				adminUser.setCin("admin");
+				adminUser
+						.setCivilState("admin");
+				adminUser.setDateOfBirth(localDate);
+				adminUser.setMonthlyUncome(200);
+				adminUser
+						.setNbrOffamilly(0);
+				adminUser.setEnabled(true);
+				adminUser.setRole(Role.Admin);
+				ur.save(adminUser);
+			}
+			else {
+				System.out.println("admin déjà crée");
+			}
+
+		}
+
+
+
+
+
 
 	}
 
