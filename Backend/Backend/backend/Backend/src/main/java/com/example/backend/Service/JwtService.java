@@ -58,11 +58,6 @@ public class JwtService implements UserDetailsService {
 
 
 
-		for (User appUser:ur.findAll())
-		{
-			if(!ur
-					.findByEmail(appUser.getEmail()).isPresent())
-			{
 				adminUser.setUserName("admin");
 				adminUser.setFirstName("admin");
 				adminUser.setPassword(pc.encode("admin"));
@@ -82,14 +77,6 @@ public class JwtService implements UserDetailsService {
 				adminUser.setEnabled(true);
 				adminUser.setRole(Role.Admin);
 				ur.save(adminUser);
-			}
-			else {
-				System.out.println("admin déjà crée");
-			}
-
-		}
-
-
 
 
 

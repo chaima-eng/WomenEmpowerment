@@ -2,12 +2,12 @@ package com.example.backend.Entity;
 
 
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 
-@Data
+@Getter
+@Setter
+@ToString
 @AllArgsConstructor
 @NoArgsConstructor
 
@@ -15,5 +15,14 @@ public class JwtRequest {
 	
 	private String userName;
 	private String userpassword;
+
+
+
+
+
+
+
+
+
 }
 

@@ -54,6 +54,9 @@ public class JwtController {
 	private PasswordEncoder pc;
 
 
+	@Autowired
+	private IntUserRepo ur;
+
 
 
 	@PostMapping("/auth")
@@ -63,8 +66,49 @@ public class JwtController {
 
 	@PostConstruct
 	public void initRoleAndUser() {
-		jwts.initRoleAndUser();
-	}
+
+		try{
+			User appUser = ur.findByUserName("admin");
+			System.out.println("base"+appUser);
+			if(appUser!=null&&appUser.getEmail()=="admin@gmail.com")
+			{
+				System.out.println("admin crée");
+
+			}
+
+			else if (appUser==null) {
+				System.out.println("userName" + appUser.getUserName());
+				jwts.initRoleAndUser();
+				System.out.println("empty");
+			}
+
+		}
+		catch (Throwable any)
+
+		{
+			jwts.initRoleAndUser();
+
+
+		}
+
+
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+
+
+
+
 
 	@PostMapping("/forget-password")
 	public JwtResponse ForgetPass(@RequestBody String email) {
